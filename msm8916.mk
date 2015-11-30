@@ -95,16 +95,14 @@ PRODUCT_PACKAGES += \
     e2fsck \
     make_ext4fs
 
-# FM
-PRODUCT_PACKAGES += \
-    FM2 \
-    FMRecord \
-    libqcomfm_jni \
-    qcom.fmradio
-
 # IO Scheduler
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.io.scheduler=row
+
+# FM
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
 
 # IRSC
 PRODUCT_COPY_FILES += \
