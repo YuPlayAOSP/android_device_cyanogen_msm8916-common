@@ -95,14 +95,14 @@ PRODUCT_PACKAGES += \
     e2fsck \
     make_ext4fs
 
-# IO Scheduler
-PRODUCT_PROPERTY_OVERRIDES += \
-    sys.io.scheduler=row
-
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
+
+# IO Scheduler
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.io.scheduler=row
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -157,6 +157,10 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
+
+# QCOM
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.data.qmi.adb_logmask=0
 
 # Recovery
 PRODUCT_PACKAGES += \
